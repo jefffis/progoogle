@@ -26,7 +26,7 @@
 		</form>
 	</header>
 	<div class="main" role="main">
-		<h2>we all ♡ google</h2>
+		<h2>we all <strong>♡</strong> google</h2>
 		<p>Well, <strong>some of us do, and ome of us don&rsquo;t</strong>. Even if you&rsquo;re a hater, these tips might still help you out. You probably use Google every day. And you probably fancy yourself a good Googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make you&rsquo;re googling even more efficient; ya dig? <strong>Outside of normal 'word matching' searches, you can also do the following:</strong></p>
 		<ol id="list">
 			<li>
@@ -42,42 +42,42 @@
 			<li>
 				<h3>Related words</h3>
 				<code>justin beiber ~terrible</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<p>Start with a main search and append and ~(tilda) before the last word to tell Google you want to search for the main phrase and anything the kind of relates to the latter.</p>
 			</li>
 			<li>
 				<h3>Wildcard searching</h3>
-				<code>justin beiber 2012..2013</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<code>justin beiber * butt *</code>
+				<p>The wildcard, much like Charle Kelly, is powerful and small. Use this in place of literally anything inside a search phrase.</p>
 			</li>
 			<li>
 				<h3>Within a time period</h3>
-				<code>justin beiber * butt *</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<code>justin beiber 2012..2013</code>
+				<p>Simply put, this searches for results of a search phrase within a certain time period.</p>
 			</li>
 			<li>
 				<h3>Search a specific file type</h3>
 				<code>filetype:pdf justin bieber</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<p>Like the site specific search above, this looks for your search phrase in a specified filetype; aka PDFs, Word Docs, images, etc.</p>
 			</li>
 			<li>
 				<h3>One word or the other</h3>
 				<code>justin OR beiber</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<p>A blanket either or search, this will look for any result with word A or word B.</p>
 			</li>
 			<li>
 				<h3>Quickly define a word</h3>
 				<code>define:overrated</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<p>A simple shortcut to define a word you specify; superb.</p>
 			</li>
 			<li>
 				<h3>Calculate something</h3>
 				<code>(8+2) * (3/2)</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<p>H8te math? Fear not, if you type the syntax correctly, Google will handle the rest.</p>
 			</li>
 			<li>
 				<h3>Convert units to other units</h3>
 				<code>6 kilometers in miles</code>
-				<p>The minus sign allows you to specify words that shouldn’t appear in your results. For example, if you’re looking for pages about Linux distributions that don’t mention Ubuntu, use the following search:</p>
+				<p>Who hasn&rsquo;t forgotten what X converts to in Y? I have. Use this little search tip to figure these conversions out.</p>
 			</li>
 		</ol>
 	<p><cite>Most google search tips <a href="http://www.howtogeek.com/106718/howtosearchgooglelikeapro11tricksyouhavetoknow/" target="_blank">grepped from here</a>.</cite></p>
@@ -94,20 +94,23 @@ $(function(){
 	var $error = $('#error');
 	$items.on('click',function(){
 		var $this = $(this);
-		$search.val($this.text()).focus();
-		//alert('fefe');
+		$search.val($this.text()).addClass('good');
+		$error.removeClass('show');
 	});
 	$search.on('blur',function(){
 		var $this = $(this);
-		if($this!=''){
+		if($this.val()!=''){
 			$error.removeClass('show');
+		}else{
+			$search.removeClass('good');
+			$error.addClass('show').text('Try again, pls.');
 		}
 	});
 	$submit.on('click',function(){
 		var $search_val = $search.val();
 		if($search_val==''){
 			//$logo.addClass('show');
-			$error.addClass('show').text('Please try searching something.');
+			$error.addClass('show').text('Try again, pls.');
 			/*setTimeout(function(){
 				$error.removeClass('show');
 				$logo.removeClass('show');

@@ -4,6 +4,7 @@
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	-webkit-border-radius:0;
 }
 ::selection {
 	background:#526cf3;
@@ -22,7 +23,7 @@ html {
 	font:100%/1.5 'Oxygen', 'Helvetica Neue', Arial, sans-serif;
 	overflow:auto;
 	line-height:1.5;
-	color:#555;
+	color:#666;
 	/*
 	background:#FAF9EB;
 	color:white;
@@ -50,7 +51,10 @@ h1, h2, h3, h4, p {
 }
 
 strong {
-	/*color:white;*/
+	color:#333;
+}
+h2 strong {
+	color:red;
 }
 
 .cf:before, .cf:after, header:before, header:after { content:""; display:table; }
@@ -58,7 +62,6 @@ strong {
 .cf, header { *zoom:1; }
 
 header {
-	background:#6884ff;
 	color:white;
 	text-shadow:0 1px 0 rgba(0,0,0,0.25);
 	box-shadow:0 1px 2px rgba(0,0,0,0.2), 0 1px 10px rgba(0,0,0,0.075), 0 1px 20px rgba(0,0,0,0.025);
@@ -70,10 +73,10 @@ header {
 	top:0;
 	left:0;
 	width:100%;
+	height:131px;
 }
 header h1 {
-	width:auto;
-	display:inline-block;
+	width:100%;
 	padding:1em;
 	font-size:150%;
 	margin:0;
@@ -83,12 +86,14 @@ header h1 {
 	left:0;
 	line-height:.8;
 	background:#589d56;
+	text-align:center;
+	height:65px;
 }
 form {
-	display:inline-block;
+	display:block;
 	width:100%;
 	padding:0;
-	margin:0;
+	margin:65px 0 0;
 	position:relative;
 	z-index:4;
 }
@@ -98,15 +103,20 @@ fieldset {
 	margin:0;
 	position:relative;
 }
-input[type=search] {
+input[type=search], input[type=text] {
 	border:0;
 	background:white;
 	width:100%;
-	padding:1.5em 1em 1.5em 10.5em;
+	padding:0 1em 0;
 	outline:none;
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
 }
-input[type=search]:focus {
+input[type=search]:focus, input[type=text]:focus {
 	background:#fdf6db;
+}
+input[type=search], input[type=text], input[type=submit] {
+	height:65px;
 }
 input[type=submit] {
 	position:absolute;
@@ -114,12 +124,13 @@ input[type=submit] {
 	top:0;
 	border:0;
 	background:#526cf3;
-	padding:1.175em 1em;
+	padding:0 1em;
 	margin:0;
 	color:white;
-	font:bold 125%/1 'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
+	font:normal 150%/1 'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
+	line-height:1;
 }
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=submit].good, input[type=text].good {
 	background:#4661ec;
 }
 input[type=submit]:active {
@@ -148,7 +159,7 @@ input[type=submit]:active {
 }*/
 
 .main {
-	padding:7em 2em 0;
+	padding:10em 2em 0;
 }
 /*.main:before {
 	content:"we all ♡ google";
@@ -185,7 +196,7 @@ li:before {
 	content:"trick num "counter(this);
 	display:block;
 	text-align:left;
-	opacity:.75;
+	opacity:.85;
 	position:relative;
 	top:1em;
 	color:#589d56;
@@ -222,12 +233,26 @@ p a {
 }
 
 @media screen and (min-width:40em) {
+header {
+	height:66px;
+}
+header h1, form {
+	display:inline-block;
+}
+header h1 {
+	width:auto;
+}
+form {
+	width:100%;
+	margin-top:0;
+}
 .main {
 	width:39em;
 	margin:0 auto;
+	padding-top:7em;
 }
-input[type=search] {
-	padding:1.5em 1em 1.5em 12em;
+input[type=search], input[type=text] {
+	padding:0 1em 0 12em;
 }
 }
 
@@ -244,7 +269,6 @@ li:before {
 	left:-6.5em;
 	top:4em;
 	text-align:right;
-	opacity:.5;
 }
 li:first-child:before {
 	top:3em;
