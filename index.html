@@ -26,12 +26,12 @@
 		</form>
 	</header>
 	<div class="main" role="main">
-		<h2>we all <strong>♡</strong> google</h2>
-		<p>Well, <strong>some of us do, and ome of us don&rsquo;t</strong>. Even if you&rsquo;re a hater, these tips might still help you out. You probably use Google every day. And you probably fancy yourself a good googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make you&rsquo;re googling even more efficient; ya dig? <strong>Outside of normal &lsquo;word matching&rsquo; searches</strong> (aka, what we all normally do), <strong>you can also do the following:</strong></p>
+		<h2>We <strong>❤</strong> Google.</h2>
+		<p>Well, <strong>some of us do, and some of us don&rsquo;t</strong>. Even if you&rsquo;re a hater, these tips might still help you out. You probably use Google every day. And you probably fancy yourself a good googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make you&rsquo;re googling even more efficient; ya dig? <strong>Outside of normal &lsquo;word matching&rsquo; searches</strong> (aka, what we all normally do), <strong>you can also do the following:</strong></p>
 		<ol id="list">
 			<li>
 				<h3>Exclude a word from your search query</h3>
-				<code>justin beiber -terrible</code>
+				<code>justin beiber -talented</code>
 				<p>If you prepend a minus sign to your query on a word, this will update the search to <strong>look for results that do not include</strong> that term.</p>
 			</li>
 			<li>
@@ -96,6 +96,7 @@ $(function(){
 		var $this = $(this);
 		$search.val($this.text()).addClass('good');
 		$error.removeClass('show');
+		$submit.focus();
 	});
 	$search.on('blur',function(){
 		var $this = $(this);
