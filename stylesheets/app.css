@@ -6,6 +6,12 @@
 	box-sizing:border-box;
 	-webkit-border-radius:0;
 }
+
+::-webkit-input-placeholder { color:#666; }
+::-moz-placeholder { color:#666; }
+:-ms-input-placeholder { color:#666; }
+input:-moz-placeholder { color:#666; }
+
 ::selection {
 	background:#526cf3;
 	color:white;
@@ -24,8 +30,8 @@ html {
 	overflow:auto;
 	line-height:1.5;
 	color:#666;
+	background:rgba(255,255,0,0.025);
 	/*
-	background:#FAF9EB;
 	color:white;
 	color:rgba(255,255,255,0.5);
 	background:#4C1D52;
@@ -44,7 +50,7 @@ h1, h2, h3 {
 }
 h1 { font-size:2.5em; }
 h2 { font-size:2em; }
-h3 { font-size:1.5em; }
+h3 { font-size:2em; font-weight:normal; text-transform:uppercase; }
 
 h1, h2, h3, h4, p {
 	margin:1.25em 0 .65em;
@@ -74,6 +80,7 @@ header {
 	left:0;
 	width:100%;
 	height:131px;
+	opacity:.85;
 }
 header h1 {
 	width:100%;
@@ -111,6 +118,9 @@ input[type=search], input[type=text] {
 	outline:none;
 	-webkit-border-radius:0;
 	-webkit-appearance:none;
+	color:#666;
+	font-family:'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
+	font-weight:bold;
 }
 input[type=search]:focus, input[type=text]:focus {
 	background:#fdf6db;
@@ -145,7 +155,7 @@ input[type=submit]:active {
 	padding:.5em;
 	text-align:center;
 	position:absolute;
-	right:4.5em;
+	right:4.65em;
 	top:.85em;
 	text-align:right;
 	text-shadow:none;
@@ -173,7 +183,7 @@ h2 {
 	font-weight:normal;
 	text-align:center;
 	font-size:250%;
-	opacity:.6;
+	/*opacity:.6;*/
 	margin-bottom:1em;
 }
 
@@ -186,8 +196,8 @@ li {
 	counter-increment:this;
 	position:relative;
 	z-index:1;
-	padding:2em 0;
-	border-bottom:2px solid #efefef;
+	padding:2em 0 3.5em;
+	border-bottom:2px solid rgba(0,0,0,0.1);
 }
 li:first-child {
 	padding-top:1em;
@@ -204,10 +214,10 @@ li:before {
 code {
 	display:block;
 	cursor:pointer;
-	background:#efefef;
+	background:#fdf6db;
 	padding:1em;
 	margin:1em 0;
-	border:1px solid #ccc;
+	border:1px solid #D4A902;
 	/*-webkit-transition:all .2s ease-in-out;
 	-moz-transition:all .2s ease-in-out;
 	transition:all .2s ease-in-out;*/
@@ -217,12 +227,11 @@ code {
 	border-color:#D4A902;
 }*/
 code:active {
-	background:#fdf6db;
-	border-color:#D4A902;
-	/*opacity:.65;*/
+	opacity:.65;
 }
 ol + p {
-	padding:0 0 2em;
+	padding:2em 0;
+	text-align:center;
 }
 p cite {
 	font-style:normal;
@@ -267,10 +276,10 @@ li:before {
 	display:block;
 	position:absolute;
 	left:-6.5em;
-	top:4em;
+	top:5em;
 	text-align:right;
 }
 li:first-child:before {
-	top:3em;
+	top:4em;
 }
 }
