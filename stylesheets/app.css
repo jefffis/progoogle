@@ -1,0 +1,252 @@
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+.snippet,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:'Arimo', 'Helvetica Neue', Arial, sans-serif;}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+::selection {
+	background:#526cf3;
+	color:white;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#526cf3;
+	color:white;
+	text-shadow:none;
+}
+html {
+	height:auto;
+	min-height:100%;
+	width:100%;
+	font:100%/1.5 'Oxygen', 'Helvetica Neue', Arial, sans-serif;
+	overflow:auto;
+	line-height:1.5;
+	color:#555;
+	/*
+	background:#FAF9EB;
+	color:white;
+	color:rgba(255,255,255,0.5);
+	background:#4C1D52;
+	text-shadow:0 1px 0 rgba(0,0,0,0.25);
+	*/
+	position:relative;
+	letter-spacing:normal;
+}
+body {
+	width:100%;
+	height:100%;
+}
+h1, h2, h3 {
+	line-height:1.1;
+	font-family:'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
+}
+h1 { font-size:2.5em; }
+h2 { font-size:2em; }
+h3 { font-size:1.5em; }
+
+h1, h2, h3, h4, p {
+	margin:1.25em 0 .65em;
+}
+
+strong {
+	/*color:white;*/
+}
+
+.cf:before, .cf:after, header:before, header:after { content:""; display:table; }
+.cf:after, .clear, header:after { clear:both; }
+.cf, header { *zoom:1; }
+
+header {
+	background:#6884ff;
+	color:white;
+	text-shadow:0 1px 0 rgba(0,0,0,0.25);
+	box-shadow:0 1px 2px rgba(0,0,0,0.2), 0 1px 10px rgba(0,0,0,0.075), 0 1px 20px rgba(0,0,0,0.025);
+	padding:0;
+	margin:0;
+	border-bottom:1px solid #ccc;
+	position:fixed;
+	z-index:3;
+	top:0;
+	left:0;
+	width:100%;
+}
+header h1 {
+	width:auto;
+	display:inline-block;
+	padding:1em;
+	font-size:150%;
+	margin:0;
+	position:absolute;
+	z-index:5;
+	top:0;
+	left:0;
+	line-height:.8;
+	background:#589d56;
+}
+form {
+	display:inline-block;
+	width:100%;
+	padding:0;
+	margin:0;
+	position:relative;
+	z-index:4;
+}
+fieldset {
+	border:0;
+	padding:0;
+	margin:0;
+	position:relative;
+}
+input[type=search] {
+	border:0;
+	background:white;
+	width:100%;
+	padding:1.5em 1em 1.5em 10.5em;
+	outline:none;
+}
+input[type=search]:focus {
+	background:#fdf6db;
+}
+input[type=submit] {
+	position:absolute;
+	right:0;
+	top:0;
+	border:0;
+	background:#526cf3;
+	padding:1.175em 1em;
+	margin:0;
+	color:white;
+	font:bold 125%/1 'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
+}
+input[type=submit]:hover {
+	background:#4661ec;
+}
+input[type=submit]:active {
+	box-shadow:0 1px 3px rgba(0,0,0,0.5) inset, 0 1px 10px rgba(0,0,0,0.25) inset, 0 1px 20px rgba(0,0,0,0.125) inset;
+	color:rgba(255,255,255,0.5);
+}
+.error {
+	display:none;
+	background:orange;
+	color:#913A03;
+	font-weight:bold;
+	padding:.5em;
+	text-align:center;
+	position:absolute;
+	right:4.5em;
+	top:.85em;
+	text-align:right;
+	text-shadow:none;
+	opacity:.65;
+}
+.error.show {
+	display:block;
+}
+/*header h1.show {
+	top:56px;
+}*/
+
+.main {
+	padding:7em 2em 0;
+}
+/*.main:before {
+	content:"we all ♡ google";
+	display:block;
+	text-align:center;
+	font-size:200%;
+	opacity:.6;
+}*/
+
+h2 {
+	font-weight:normal;
+	text-align:center;
+	font-size:250%;
+	opacity:.6;
+	margin-bottom:1em;
+}
+
+ol {
+	margin:0;
+	padding:0;
+}
+li {
+	list-style:none;
+	counter-increment:this;
+	position:relative;
+	z-index:1;
+	padding:2em 0;
+	border-bottom:2px solid #efefef;
+}
+li:first-child {
+	padding-top:1em;
+}
+li:before {
+	content:"trick num "counter(this);
+	display:block;
+	text-align:left;
+	opacity:.75;
+	position:relative;
+	top:1em;
+	color:#589d56;
+}
+code {
+	display:block;
+	cursor:pointer;
+	background:#efefef;
+	padding:1em;
+	margin:1em 0;
+	border:1px solid #ccc;
+	/*-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;*/
+}
+/*code:hover {
+	background:#fdf6db;
+	border-color:#D4A902;
+}*/
+code:active {
+	background:#fdf6db;
+	border-color:#D4A902;
+	/*opacity:.65;*/
+}
+ol + p {
+	padding:0 0 2em;
+}
+p cite {
+	font-style:normal;
+	font-size:80%;
+}
+p a {
+	color:#526cf3;
+}
+
+@media screen and (min-width:40em) {
+.main {
+	width:39em;
+	margin:0 auto;
+}
+input[type=search] {
+	padding:1.5em 1em 1.5em 12em;
+}
+}
+
+@media screen and (min-width:60em) {
+.main {
+	width:39em;
+	margin:0 auto;
+	padding:7em 0 0;
+}
+li:before {
+	content:"trick num "counter(this);
+	display:block;
+	position:absolute;
+	left:-6.5em;
+	top:4em;
+	text-align:right;
+	opacity:.5;
+}
+li:first-child:before {
+	top:3em;
+}
+}
