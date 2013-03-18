@@ -5,6 +5,7 @@
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	-webkit-border-radius:0;
+	-webkit-text-size-adjust:none;
 }
 
 ::-webkit-input-placeholder { color:#666; }
@@ -13,12 +14,12 @@
 input:-moz-placeholder { color:#666; }
 
 ::selection {
-	background:#526cf3;
+	background:#dd4b39;
 	color:white;
 	text-shadow:none;
 }
 ::-moz-selection {
-	background:#526cf3;
+	background:#dd4b39;
 	color:white;
 	text-shadow:none;
 }
@@ -60,7 +61,7 @@ strong {
 	color:#333;
 }
 h2 strong {
-	color:red;
+	color:#dd4b39;
 }
 
 .cf:before, .cf:after, header:before, header:after { content:""; display:table; }
@@ -95,6 +96,14 @@ header h1 {
 	background:#589d56;
 	text-align:center;
 	height:65px;
+	cursor:default;
+}
+h1 span {
+	font-size:50%;
+	opacity:.8;
+	position:relative;
+	top:-.35em;
+	left:.5em;
 }
 form {
 	display:block;
@@ -142,7 +151,7 @@ input[type=submit] {
 	outline:none;
 	opacity:.5;
 }
-input[type=submit]:hover, input[type=submit]:focus {
+input[type=submit]:hover, input[type=submit]:focus, input[type=submit].good {
 	background:#4661ec;
 	opacity:1;
 }
@@ -226,13 +235,16 @@ li:first-child {
 	padding-top:1em;
 }
 li:before {
-	content:"trick num "counter(this);
+	content:"Trick #"counter(this);
 	display:block;
 	text-align:left;
 	opacity:.85;
 	position:relative;
 	top:1em;
 	color:#589d56;
+}
+li:nth-child(even):before {
+	color:#dd4b39;
 }
 code {
 	display:block;
@@ -245,6 +257,7 @@ code {
 	-moz-transition:all .2s ease-in-out;
 	transition:all .2s ease-in-out;*/
 	position:relative;
+	color:#913A03;
 }
 code:after {
 	content:"Click & search this to try out.";
@@ -254,6 +267,7 @@ code:after {
 	right:0;
 	font:normal 90%/1 'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
 	opacity:.8;
+	color:#666;
 }
 /*code:hover {
 	background:#fdf6db;
@@ -271,7 +285,7 @@ p cite {
 	font-size:80%;
 }
 p a {
-	color:#526cf3;
+	color:#dd4b39;
 }
 
 @media screen and (min-width:40em) {
@@ -283,6 +297,25 @@ header h1, form {
 }
 header h1 {
 	width:auto;
+	cursor:pointer;
+}
+h1 span {
+	position:absolute;
+	left:-20em;
+	opacity:1;
+	top:auto;
+	bottom:-3em;
+	color:#333;
+	text-shadow:none;
+	background:white;
+	padding:.5em;
+	width:auto;
+	/*-webkit-transition:all .1s ease-out;
+	-moz-transition:all .1s ease-out;
+	transition:all .1s ease-out;*/
+}
+h1.yep span {
+	left:1em;
 }
 form {
 	width:100%;
@@ -311,7 +344,7 @@ li:hover code:after {
 	padding:7em 0 0;
 }
 li:before {
-	content:"trick num "counter(this);
+	content:"Trick #"counter(this);
 	display:block;
 	position:absolute;
 	left:-6.5em;

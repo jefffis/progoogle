@@ -4,14 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title dir="ltr">Google like a pro, er, a nerd.</title>
-	<meta name="description" content="" />
+	<title dir="ltr">Google like a pro, er, nerd.</title>
+	<meta name="description" content="Little tips on how to better Google and optimize your search results." />
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,300,700|Oxygen:400,700' rel='stylesheet' type='text/css' />
 	<link href="stylesheets/app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<header role="banner">
-		<h1>ProGoogle</h1>
+		<h1>ProGoogl&rsquo;n
+			<span>How to Google like a pro</span>
+		</h1>
 		<form method="get" role="search" action="http://www.google.com/search" target="_blank">
 			<input type="hidden" name="ie" value="UTF-8" />
 			<input type="hidden" name="oe" value="UTF-8" />
@@ -27,7 +29,8 @@
 	</header>
 	<div class="main" role="main">
 		<h2>We <strong>❤</strong> Google.</h2>
-		<p>Well, <strong>some of us do, and some of us don&rsquo;t</strong>. Even if you&rsquo;re a hater, these tips might still help you out. You probably use Google every day. And you probably fancy yourself a good googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make you&rsquo;re googling even more efficient; ya dig? <strong>Outside of normal &lsquo;word matching&rsquo; searches</strong> (aka, what we all normally do), <strong>you can also do the following:</strong></p>
+		<p>Well, <strong>some of us do, and some of us don&rsquo;t</strong>.</p>
+		<p>Even if you&rsquo;re a hater, these tips might still help you out. You probably use Google every day. And you probably fancy yourself a good googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make you&rsquo;re googling even more efficient; ya dig? <strong>Outside of normal &lsquo;word matching&rsquo; searches</strong> (aka, what we all normally do), <strong>you can also do the following:</strong></p>
 		<ol id="list">
 			<li>
 				<h3>Exclude a word from your search query</h3>
@@ -92,11 +95,16 @@ $(function(){
 	var $submit = $('#submit');
 	var $search = $('#search');
 	var $error = $('#error');
+	$logo.on('click',function(){
+		var $this = $(this);
+		$this.toggleClass('yep');
+	});
 	$items.on('click',function(){
 		var $this = $(this);
 		$search.val($this.text()).addClass('good');
 		$error.removeClass('show');
 		$submit.focus();
+		$submit.addClass('good');
 	});
 	$search.on('blur',function(){
 		var $this = $(this);
@@ -104,6 +112,7 @@ $(function(){
 			$error.removeClass('show');
 		}else{
 			$search.removeClass('good');
+			$submit.removeClass('good');
 			$error.addClass('show').text('Try again, pls.');
 		}
 	});
