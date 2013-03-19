@@ -31,7 +31,7 @@ html {
 	overflow:auto;
 	line-height:1.5;
 	color:#666;
-	background:rgba(255,255,0,0.025);
+	background:rgba(255,255,0,0.0375);
 	/*
 	color:white;
 	color:rgba(255,255,255,0.5);
@@ -181,17 +181,18 @@ input[type=submit]:active {
 }
 .error {
 	display:none;
-	background:orange;
+	/*background:orange;*/
 	color:#913A03;
 	font-weight:bold;
 	padding:.5em;
 	text-align:center;
 	position:absolute;
-	right:4.65em;
-	top:.85em;
+	right:6.4em;
+	top:1.4em;
 	text-align:right;
 	text-shadow:none;
 	opacity:.65;
+	font-size:80%;
 }
 .error.show {
 	display:block;
@@ -287,6 +288,19 @@ p cite {
 p a {
 	color:#dd4b39;
 }
+p a:nth-child(2) {
+	display:inline-block;
+	padding-left:1em;
+}
+.bonus {
+	/*color:#913A03;*/
+	padding:2em 0;
+	margin-top:2em;
+	border-top:2px solid rgba(0,0,0,0.1);
+}
+.bonus strong {
+	/*color:#913A03;*/
+}
 
 @media screen and (min-width:40em) {
 header {
@@ -307,7 +321,7 @@ h1 span {
 	bottom:-3em;
 	color:#333;
 	text-shadow:none;
-	background:white;
+	background:rgba(255,255,0,0.0375);
 	padding:.5em;
 	width:auto;
 	/*-webkit-transition:all .1s ease-out;
