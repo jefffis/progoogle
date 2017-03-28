@@ -26,9 +26,9 @@
 </head>
 <body>
 	<header role="banner">
-		<h1>ProGoogl&rsquo;n
+		<!-- <h1>ProGoogl&rsquo;n
 			<span>How to Google like a pro</span>
-		</h1>
+		</h1> -->
 		<form method="get" role="search" action="http://www.google.com/search" target="_blank">
 			<input type="hidden" name="ie" value="UTF-8" />
 			<input type="hidden" name="oe" value="UTF-8" />
@@ -36,16 +36,16 @@
 				<label for="search">
 					<input type="search" name="q" id="search" value="" placeholder="Get searchin'" />
 				</label>
-				<input type="submit" value="⇗" id="submit" />
+				<input type="submit" value="Search" id="submit" />
 			</fieldset>
 			<input type="hidden" name="sitesearch" value="" checked />
 			<div class="error" id="error"></div>
 		</form>
 	</header>
 	<div class="main" role="main">
-		<h2>We <strong>❤</strong> Google.</h2>
-		<p><strong>Well, some of us do, and some of us don&rsquo;t</strong>.</p>
-		<p>But even if you&rsquo;re a hater, you probably use Google every day. And you probably fancy yourself a good googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make sure you&rsquo;re googling even more efficiently than you ever thought possible. Saavy?</p>
+		<h2>Google like a pro.</h2>
+		<!-- <p><strong>Well, some of us do, and some of us don&rsquo;t</strong>.</p> -->
+		<p>You probably use Google every day. And you probably fancy yourself a good googler too. And you might just be one. But, chances are <strong>there are some little tricks that you don&rsquo;t know about</strong> that can make sure you&rsquo;re googling even more efficiently than you ever thought possible. Saavy?</p>
 		<p>Outside of normal &lsquo;word matching&rsquo; searches (aka, what we all normally do), <strong>you can also use some of the tips below to help get you answers even quicker:</strong></p>
 		<p class="bonus"><strong>Bonus:</strong> if you&rsquo;re a Google-hater, these tips should work in any search engine you prefer. No guarantees for Ask.com however, <em>but that&rsquo;s what Jeeves is for, right?</em></p>
 		<ol id="list">
@@ -100,7 +100,9 @@
 				<p>Who hasn&rsquo;t forgotten what X converts to in Y? I have. Use this little search tip to <strong>figure all kinds of unit conversions out</strong>.</p>
 			</li>
 		</ol>
-	<p><cite>Most google search tips <a href="http://www.howtogeek.com/106718/howtosearchgooglelikeapro11tricksyouhavetoknow/" target="_blank">grepped from here</a>. <a href="/">Massag&rsquo;d by jefff</a></cite></p>
+	<p>
+		&copy; now; passionately made by <a href="http://hire.jefff.co/" target="_blank">jefff</a>.
+	</p>
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -130,14 +132,14 @@ $(function(){
 		}else{
 			$search.removeClass('good');
 			$submit.removeClass('good');
-			$error.addClass('show').text('Try again buddy.');
+			// $error.addClass('show').text('Try again buddy.');
 		}
 	});
 	$submit.on('click',function(){
 		var $search_val = $search.val();
 		if($search_val==''){
 			//$logo.addClass('show');
-			$error.addClass('show').text('Try again buddy.');
+			// $error.addClass('show').text('Try again buddy.');
 			/*setTimeout(function(){
 				$error.removeClass('show');
 				$logo.removeClass('show');
