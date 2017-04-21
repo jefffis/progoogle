@@ -6,8 +6,9 @@
 }
 
 html {
+	background: #293033;
 	font:100%/1.5 -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#111;
+	color: white;
 }
 body {
 	width:100%;
@@ -38,10 +39,10 @@ h2 strong {
 header {
 	color:white;
 	/*text-shadow:0 1px 0 rgba(0,0,0,0.25);*/
-	box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	/*box-shadow:0 1px 2px rgba(0,0,0,0.1);*/
 	padding:0;
 	margin:0;
-	border-bottom:1px solid #ddd;
+	/*border-bottom:1px solid #ddd;*/
 	position:fixed;
 	z-index:3;
 	top:0;
@@ -110,7 +111,7 @@ input[type=submit] {
 	right:0;
 	top:0;
 	border:0;
-	background:#111;
+	background: #ccc;
 	padding:0 1em;
 	margin:0;
 	color:white;
@@ -124,7 +125,7 @@ input[type=submit] {
 	-webkit-appearance:none;
 }
 input[type=submit]:hover, input[type=submit]:focus, input[type=submit].good {
-	background:#4661ec;
+	background:#05FAA8;
 	/*opacity:1;*/
 }
 
@@ -187,7 +188,7 @@ input[type=submit]:active {
 
 h2 {
 	font-weight:normal;
-	text-align:center;
+	/*text-align:center;*/
 	font-size:250%;
 	/*opacity:.6;*/
 	margin-bottom:1em;
@@ -203,7 +204,7 @@ li {
 	position:relative;
 	z-index:1;
 	padding:2em 0 3.5em;
-	border-bottom:2px solid rgba(0,0,0,0.1);
+	border-top:4px solid rgba(255,255,255,0.1);
 }
 li:first-child {
 	padding-top:1em;
@@ -212,19 +213,22 @@ li:before {
 	content:"Trick #"counter(this);
 	display:block;
 	text-align:left;
-	opacity:.85;
+	opacity:.5;
 	position:relative;
 	top:1em;
 	/*color:#589d56;*/
+}
+p {
+	font-size: 20px;
 }
 /*li:nth-child(even):before {
 	color:#dd4b39;
 }*/
 code {
-	display:block;
+	display:inline-block;
 	cursor:pointer;
 	background:#efefef;
-	padding:1em;
+	padding:1em 1.5em;
 	margin:1em 0 3em;
 	/*border:1px solid;*/
 	border-radius: 4px;
@@ -233,17 +237,18 @@ code {
 	transition:all .2s ease-in-out;*/
 	position:relative;
 	font-size: 16px;
-	/*color:#913A03;*/
+	color:#293033;
 }
 code:after {
-	content:"Click & search this to try out.";
+	content:"Click to try out";
 	display:block;
 	position:absolute;
 	bottom:-2em;
-	right:0;
-	font:normal 90%/1 'Roboto Condensed', 'Helvetica Neue', Arial, sans-serif;
+	left:0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
 	opacity:.8;
-	color:#666;
+	color:white;
 }
 /*code:hover {
 	background:#fdf6db;
@@ -256,6 +261,7 @@ ol + p {
 	padding:2em 0;
 	text-align:center;
 }
+
 p cite {
 	font-style:normal;
 	font-size:80%;
@@ -271,10 +277,16 @@ p a:nth-child(2) {
 	/*color:#913A03;*/
 	padding:2em 0;
 	margin-top:2em;
-	border-top:2px solid rgba(0,0,0,0.1);
+	border-top:4px solid rgba(255,255,255,0.1);
 }
 .bonus strong {
 	/*color:#913A03;*/
+}
+p:last-of-type {
+	text-align: left;
+}
+p:last-of-type a {
+	color: white;
 }
 
 @media screen and (min-width:40em) {
@@ -343,4 +355,10 @@ li:before {
 li:first-child:before {
 	top:4em;
 }
+}
+
+@media screen and (max-width: 375px) {
+	body {
+		font-size: 90%;
+	}
 }
