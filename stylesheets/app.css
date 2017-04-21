@@ -120,6 +120,8 @@ input[type=submit] {
 	line-height:1;
 	outline:none;
 	/*opacity:.5;*/
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
 }
 input[type=submit]:hover, input[type=submit]:focus, input[type=submit].good {
 	background:#4661ec;
@@ -152,17 +154,18 @@ input[type=submit]:active {
 .error {
 	display:none;
 	/*background:orange;*/
-	color:#913A03;
+	/*background: rgba(255, 255, 255, 0.75);*/
+	color:red;
 	font-weight:bold;
-	padding:.5em;
-	text-align:center;
+	padding:2em;
+	/*text-align:center;*/
 	position:absolute;
-	right:6.4em;
-	top:1.4em;
-	text-align:right;
+	left:0;
+	top:4.125rem;
+	/*text-align:right;*/
 	text-shadow:none;
-	opacity:.65;
-	font-size:80%;
+	/*opacity:.65;*/
+	/*font-size:80%;*/
 }
 .error.show {
 	display:block;
